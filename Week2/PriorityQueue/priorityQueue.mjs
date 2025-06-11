@@ -25,5 +25,15 @@ class Monster{
     }
 }
 
-export { PriorityQueue, Monster };
+let priorityQueue = new PriorityQueue();
+priorityQueue.enqueue(new Monster("슬라임", 100));
+priorityQueue.enqueue(new Monster("슬라임", 87));
+priorityQueue.enqueue(new Monster("슬라임", 21));
+priorityQueue.enqueue(new Monster("슬라임", 47));
+priorityQueue.enqueue(new Monster("주황버섯", 200));
 
+console.log(priorityQueue.dequeue());
+console.log(priorityQueue.dequeue());
+console.log(priorityQueue.dequeue());
+console.log(priorityQueue.dequeue());
+console.log(priorityQueue.dequeue());
