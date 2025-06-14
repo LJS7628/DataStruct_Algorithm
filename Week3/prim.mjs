@@ -13,7 +13,7 @@ class City{
     }
 }
 
-class Dijkstra{
+class Prim{
     constructor(){
         this.all_cities = {};
     }
@@ -22,10 +22,10 @@ class Dijkstra{
         this.all_cities[city.name] = city;
     }
 
-    shortestPath(start_city, end_city){
+    MST(start_city){
         let visited_cities = {};
         let unvisited_cities = {};
-        let shortest_path_table = {};
+        let mst_table = {};
 
         for(let city_name in this.all_cities){
             unvisited_cities[city_name] = this.all_cities[city_name];
@@ -37,17 +37,17 @@ class Dijkstra{
         }else{
             for(let city_name in unvisited_cities){
                 //shortest_path_table[city_name] = Infinity;
-                shortest_path_table[city_name] = {distance: Infinity, city: null};
+                mst_table[city_name] = {distance: Infinity, city: null};
             }
         }
         //shortest_path_table[start_city.name] = 0;
-        shortest_path_table[start_city.name] = {distance: 0, city: null};
+        mst_table[start_city.name] = {distance: 0, city: null};
 
         while(Object.keys(unvisited_cities).length > 0){
             let closest_city_name = null;
 
             for(let city_name in unvisited_cities){
-                if(closest_city_name == null || shortest_path_table[city_name].distance < shortest_path_table[closest_city_name].distance){
+                if(closest_city_name == null || mst_table[city_name].distance < mst_table[closest_city_name].distance){
                     closest_city_name = city_name;
                 }
             }
@@ -60,34 +60,22 @@ class Dijkstra{
                     continue;
                 }
 
-                let distance = shortest_path_table[closest_city_name].distance + // 출발 도시에서 현재 도시까지 거리 +
-                visited_cities[closest_city_name].adjacent_cities[adjacent_city_name]; // 현재 도시에서 인접 도시까지 거리
+                //let distance = mst_table[closest_city_name].distance + // 출발 도시에서 현재 도시까지 거리 +
+                //visited_cities[closest_city_name].adjacent_cities[adjacent_city_name]; // 현재 도시에서 인접 도시까지 거리
+                let distance = visited_cities[closest_city_name].adjacent_cities[adjacent_city_name];
 
-                if(shortest_path_table[adjacent_city_name].distance > distance){
-                    shortest_path_table[adjacent_city_name].distance = distance;
-                    shortest_path_table[adjacent_city_name].city = visited_cities[closest_city_name];
+                if(mst_table[adjacent_city_name].distance > distance){
+                    mst_table[adjacent_city_name].distance = distance;
+                    mst_table[adjacent_city_name].city = visited_cities[closest_city_name];
                 }
             }
         }
 
-        let path_string = this.showShortestPathRecursively(end_city.name, shortest_path_table);
-        console.log(path_string);
-    }
-
-    showShortestPathRecursively(destination_city_name, shortest_path_table, path_string = ""){
-        if(shortest_path_table[destination_city_name].city == null){
-            path_string += destination_city_name;
-            return path_string;
-        }
-
-        path_string = this.showShortestPathRecursively(shortest_path_table[destination_city_name].city.name,
-            shortest_path_table, path_string);
-        path_string += " -> " + destination_city_name;
-        return path_string;
+        console.log(mst_table);
     }
 }
 
-let dijkstra = new Dijkstra();
+let prim = new Prim();
 
 let seoul = new City("서울");
 let wonju = new City("원주");
@@ -96,12 +84,12 @@ let daejeon = new City("대전");
 let jeonju = new City("전주");
 let daegu = new City("대구");
 
-dijkstra.registerCity(seoul);
-dijkstra.registerCity(wonju);
-dijkstra.registerCity(gangneung);
-dijkstra.registerCity(daejeon);
-dijkstra.registerCity(jeonju);
-dijkstra.registerCity(daegu);
+prim.registerCity(seoul);
+prim.registerCity(wonju);
+prim.registerCity(gangneung);
+prim.registerCity(daejeon);
+prim.registerCity(jeonju);
+prim.registerCity(daegu);
 
 // 서울 연결
 seoul.addAdjacentCity(wonju, 87);
@@ -137,4 +125,4 @@ daegu.addAdjacentCity(gangneung, 212);
 daegu.addAdjacentCity(daejeon, 122);
 daegu.addAdjacentCity(jeonju, 130);
 
-dijkstra.shortestPath(seoul, daegu);
+prim.MST(seoul);

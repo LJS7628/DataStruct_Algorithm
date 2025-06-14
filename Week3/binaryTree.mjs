@@ -1,6 +1,7 @@
 class BinaryTree{
-    constructor(data){
+    constructor(data, freq = 0){
         this.data = data;
+        this.freq = freq;
         this.leftSubTree = null;
         this.rightSubTree = null;
         this.parentTree = null;
