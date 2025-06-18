@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\DataStruct_Algorithm\\DataStruct_Algorithm\\C_Cpp\\Week1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3B61D0A6-5113-40D1-BF88-2B98174675C8}|Stack\\Stack.vcxproj|D:\\DataStruct_Algorithm\\DataStruct_Algorithm\\C_Cpp\\Week1\\Stack\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3B61D0A6-5113-40D1-BF88-2B98174675C8}|Stack\\Stack.vcxproj|solutionrelative:Stack\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B61D0A6-5113-40D1-BF88-2B98174675C8}|Stack\\Stack.vcxproj|D:\\DataStruct_Algorithm\\DataStruct_Algorithm\\C_Cpp\\Week1\\Stack\\LinkedListStack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3B61D0A6-5113-40D1-BF88-2B98174675C8}|Stack\\Stack.vcxproj|solutionrelative:Stack\\LinkedListStack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LinkedListStack.h",
+              "DocumentMoniker": "D:\\DataStruct_Algorithm\\DataStruct_Algorithm\\C_Cpp\\Week1\\Stack\\LinkedListStack.h",
+              "RelativeDocumentMoniker": "Stack\\LinkedListStack.h",
+              "ToolTip": "D:\\DataStruct_Algorithm\\DataStruct_Algorithm\\C_Cpp\\Week1\\Stack\\LinkedListStack.h",
+              "RelativeToolTip": "Stack\\LinkedListStack.h",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-17T08:46:56.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Main.cpp",
+              "DocumentMoniker": "D:\\DataStruct_Algorithm\\DataStruct_Algorithm\\C_Cpp\\Week1\\Stack\\Main.cpp",
+              "RelativeDocumentMoniker": "Stack\\Main.cpp",
+              "ToolTip": "D:\\DataStruct_Algorithm\\DataStruct_Algorithm\\C_Cpp\\Week1\\Stack\\Main.cpp",
+              "RelativeToolTip": "Stack\\Main.cpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-17T08:46:24.039Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
